@@ -134,5 +134,16 @@
       0.89
     ],
     "beta": 0.6
+  },
+  "peer_draw": {
+    "request": "draw-a-peer",
+    "max_items": 4,
+    "uniforms": [
+      0.95,
+      0.02,
+      0.4,
+      0.89
+    ],
+    "beta": 0.6
   }
 }

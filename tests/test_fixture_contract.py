@@ -38,3 +38,14 @@ class FixtureContractTests(unittest.TestCase):
             self.assertGreaterEqual(entry["priority"], 0)
         uniforms = np.asarray(primary["draw"]["uniforms"])
         self.assertTrue(((uniforms >= 0) & (uniforms < 1)).all())
+
+    def test_training_observation_references(self):
+        primary = read_fixture("primary.json")
+        revision = read_fixture("revision.json")
+        draw_ids = {primary["draw"]["request"], primary["peer_draw"]["request"]}
+        frame_ids = {item["id"] for item in primary["physical_frames"]}
+        observations = revision["training_observations"]["by_draw"]
+        self.assertEqual({item["draw"] for item in observations}, draw_ids)
+        for item in observations:
+            self.assertFalse(set(item["td_by_frame"]) - frame_ids)
+            self.assertTrue(all(np.isfinite(v) for v in item["td_by_frame"].values()))

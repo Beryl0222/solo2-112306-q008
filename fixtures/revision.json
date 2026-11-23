@@ -38,5 +38,24 @@
       "beta": 0.6
     }
   ],
-  "replaces": "capture-8-a"
+  "replaces": "capture-8-a",
+  "training_observations": {
+    "step": "update-31",
+    "by_draw": [
+      {
+        "draw": "draw-a",
+        "td_by_frame": {
+          "f3": 0.71,
+          "f6": -0.35
+        }
+      },
+      {
+        "draw": "draw-a-peer",
+        "td_by_frame": {
+          "f3": -0.8,
+          "f6": 0.24
+        }
+      }
+    ]
+  }
 }
