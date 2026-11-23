@@ -15,6 +15,11 @@
       "id": "f5",
       "version": 2,
       "priority": 3.9
+    },
+    {
+      "id": "f8",
+      "version": 2,
+      "priority": 0.0
     }
   ],
   "parallel_queries": [

@@ -35,6 +35,11 @@
       "id": "f7",
       "priority": 0,
       "version": 1
+    },
+    {
+      "id": "f8",
+      "priority": 0.8,
+      "version": 1
     }
   ],
   "windows": [
@@ -86,6 +91,13 @@
       "frames": [
         "f5",
         "f7"
+      ]
+    },
+    {
+      "id": "w-g",
+      "course": "balance",
+      "frames": [
+        "f8"
       ]
     }
   ],
