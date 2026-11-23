@@ -3,19 +3,38 @@
   "physical_frames": [
     {
       "id": "f1",
-      "priority": 0.2
+      "priority": 0.2,
+      "version": 1
     },
     {
       "id": "f2",
-      "priority": 3.0
+      "priority": 3.0,
+      "version": 1
     },
     {
       "id": "f3",
-      "priority": 1.1
+      "priority": 1.1,
+      "version": 1
     },
     {
       "id": "f4",
-      "priority": 0.0
+      "priority": 0.0,
+      "version": 1
+    },
+    {
+      "id": "f5",
+      "priority": 3e-08,
+      "version": 1
+    },
+    {
+      "id": "f6",
+      "priority": 3000000000000.0,
+      "version": 1
+    },
+    {
+      "id": "f7",
+      "priority": 0,
+      "version": 1
     }
   ],
   "windows": [
@@ -44,11 +63,64 @@
         "f2"
       ],
       "course": "contact"
+    },
+    {
+      "id": "w-d",
+      "course": "recovery",
+      "frames": [
+        "f4",
+        "f5"
+      ]
+    },
+    {
+      "id": "w-e",
+      "course": "contact",
+      "frames": [
+        "f3",
+        "f6"
+      ]
+    },
+    {
+      "id": "w-f",
+      "course": "balance",
+      "frames": [
+        "f5",
+        "f7"
+      ]
     }
   ],
   "course_minimums": {
     "contact": 1,
     "recovery": 1
   },
-  "seed": 41
+  "seed": 41,
+  "capture": "capture-8-a",
+  "courses": [
+    [
+      "contact",
+      1,
+      2
+    ],
+    [
+      "recovery",
+      1,
+      1
+    ],
+    [
+      "balance",
+      1,
+      1
+    ]
+  ],
+  "draw": {
+    "request": "draw-a",
+    "max_items": 4,
+    "uniforms": [
+      0.95,
+      0.02,
+      0.4,
+      0.89
+    ],
+    "beta": 0.6
+  }
 }
