@@ -1,0 +1,9 @@
+{
+  "format": 1,
+  "fixture": "replay_sampling",
+  "synthetic": true,
+  "records": [
+    "primary.json",
+    "revision.json"
+  ]
+}
